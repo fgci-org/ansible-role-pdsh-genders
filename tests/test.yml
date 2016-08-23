@@ -4,6 +4,6 @@
    remote_user: root
    roles:
      - ansible-role-fgci-repo
-     - ansible-role-pdsh-machines
+     - ansible-role-pdsh-genders
    vars:
      - pdsh_group: "{{ groups['compute'] }}"

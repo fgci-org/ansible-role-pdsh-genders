@@ -1,5 +1,5 @@
 ---
-# defaults file for ansible-role-pdsh-machines
+# defaults file for ansible-role-pdsh-genders
 
 # List of pdsh modules conflicting with genders that must be removed
 pdsh_genders_conflict:
@@ -11,9 +11,11 @@ pdsh_el7_packages:
  - pdsh-mod-genders
  - pdsh-mod-netgroup
  - pdsh-rcmd-ssh
+ - genders
 
 pdsh_el6_packages:
  - pdsh
  - pdsh-mod-genders
  - pdsh-mod-netgroup
  - pdsh-rcmd-ssh
+ - genders

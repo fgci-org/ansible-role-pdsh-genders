@@ -1,5 +1,5 @@
-ansible-role-pdsh-machines
-==========================
+ansible-role-pdsh-genders
+=========================
 
 Installs pdsh and sets up a /etc/genders based on ansible groups.
 
@@ -25,7 +25,7 @@ Including an example of how to use your role (for instance, with variables passe
 
     - hosts: servers
       roles:
-         - { role: ansible-role-pdsh-machines }
+         - { role: ansible-role-pdsh-genders }
 
 License
 -------
