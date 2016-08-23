@@ -6,7 +6,7 @@
    when: ansible_os_family == "RedHat"
 
  - name: populate genders file
-   template: src='pdsh_genders.j2' dest='/etc/genders' mode='0644' owner=root group=root
+   template: src='pdsh_genders.j2' dest='/etc/genders' mode='0644' owner=root group=root validate='nodeattr --parse-check -f %s'
 
  - name: Remove old /etc/machines to avoid confusion
    file: path=/etc/machines state=absent
