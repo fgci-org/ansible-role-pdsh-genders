@@ -1,4 +1,4 @@
 ---
 
-- src: https://github.com/CSC-IT-Center-for-Science/ansible-role-fgci-repo
+- src: https://github.com/CSCfi/ansible-role-fgci-repo
   path: ../
