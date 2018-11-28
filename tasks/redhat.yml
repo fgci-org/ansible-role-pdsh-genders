@@ -7,11 +7,9 @@
    with_items: "{{ pdsh_genders_conflict }}"
 
  - name: install pdsh and dependencies EL7
-   yum: name={{ item }} state=installed
-   with_items: "{{ pdsh_el7_packages }}"
+   yum: name={{ pdsh_el7_packages }} state=installed
    when: ansible_distribution_major_version == "7"
 
  - name: install pdsh and dependencies EL6
-   yum: name={{ item }} state=installed
-   with_items: "{{ pdsh_el6_packages }}"
+   yum: name={{ pdsh_el6_packages }} state=installed
    when: ansible_distribution_major_version == "6"
