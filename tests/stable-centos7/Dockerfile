@@ -2,7 +2,7 @@
 FROM centos:centos7
 MAINTAINER Janne Blomqvist <janne.blomqvist@aalto.fi>
 RUN yum -y install epel-release sudo sed && \
-    yum -y install ansible && \
+    yum -y install ansible git && \
     sed -i -e 's/^Defaults.*requiretty/Defaults    !requiretty/' -e 's/^%wheel.*ALL$/%wheel    ALL=(ALL)    NOPASSWD: ALL/' /etc/sudoers
 
 RUN mkdir -p /etc/ansible/
