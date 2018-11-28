@@ -10,6 +10,9 @@ matrix:
 env:
   - IMAGE_BUILD_PLATFORM=stable-centos7
 
+install:
+  - npm install -g validate-dockerfile
+
 before_script:
   # TESTDIR = Where the stable-centos/Dockerfile is located
   - export TESTDIR=tests
@@ -18,6 +21,7 @@ before_script:
   - export COMMIT=${TRAVIS_COMMIT::8}
   # The tag we assign the docker image we build with the Dockerfile
   - export REPO=csc/ansible
+  # https://www.npmjs.com/package/validate-dockerfile - validate the Dockerfile
   - docklint ${TESTDIR}/${IMAGE_BUILD_PLATFORM}/Dockerfile
   # Build the image
   - docker build -t ${REPO}:${IMAGE_BUILD_PLATFORM} ${TESTDIR}/${IMAGE_BUILD_PLATFORM}/
