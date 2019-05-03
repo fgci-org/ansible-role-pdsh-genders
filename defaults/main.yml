@@ -19,3 +19,7 @@ pdsh_el6_packages:
  - pdsh-mod-netgroup
  - pdsh-rcmd-ssh
  - genders
+
+pdsh_ohpc_packages:
+  - pdsh-ohpc
+  - pdsh-mod-genders-ohpc

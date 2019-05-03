@@ -3,13 +3,12 @@
 #
 
  - name: remove pdsh modules conflicting with genders
-   package: name={{ item }} state=absent
-   with_items: "{{ pdsh_genders_conflict }}"
+   package: name={{ pdsh_genders_conflict }} state=absent
 
  - name: install pdsh and dependencies EL7
-   yum: name={{ pdsh_el7_packages }} state=installed
+   package: name={{ pdsh_el7_packages }} state=installed
    when: ansible_distribution_major_version == "7"
 
  - name: install pdsh and dependencies EL6
-   yum: name={{ pdsh_el6_packages }} state=installed
+   package: name={{ pdsh_el6_packages }} state=installed
    when: ansible_distribution_major_version == "6"
