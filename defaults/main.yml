@@ -23,3 +23,5 @@ pdsh_el6_packages:
 pdsh_ohpc_packages:
   - pdsh-ohpc
   - pdsh-mod-genders-ohpc
+
+pdsh_use_ohpc: True
