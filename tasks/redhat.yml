@@ -7,15 +7,15 @@
 
 - name: install pdsh and dependencies EL7
   package: name={{ pdsh_el7_packages }} state=installed
-  when: ansible_distribution_major_version == "7" and not pdsh_use_ohpc
+  when: ansible_distribution_major_version == "7" and not pdsh_use_ohpc|bool
 
 - name: remove EPEL packages when using OHPC
   package: name={{ pdsh_el7_packages }} state=absent
-  when: ansible_distribution_major_version == "7" and pdsh_use_ohpc
+  when: ansible_distribution_major_version == "7" and pdsh_use_ohpc|bool
 
 - name: install OHPC pdsh packages
   package: name={{ pdsh_ohpc_packages }} state=present
-  when: pdsh_use_ohpc
+  when: pdsh_use_ohpc|bool
 
 - name: install pdsh and dependencies EL6
   package: name={{ pdsh_el6_packages }} state=installed
