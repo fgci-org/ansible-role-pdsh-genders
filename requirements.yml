@@ -3,5 +3,5 @@
 - src: https://github.com/CSCfi/ansible-role-fgci-repo
   path: ../
 
-- src: https://github.com/jabl/ansible-role-ohpc-repo
+- src: https://github.com/fgci-org/ansible-role-ohpc-repo
   path: ../
