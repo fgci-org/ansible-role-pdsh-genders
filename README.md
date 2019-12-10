@@ -1,7 +1,7 @@
 ansible-role-pdsh-genders
 =========================
 
-[![Build Status](https://travis-ci.org/jabl/ansible-role-pdsh-genders.svg?branch=master)](https://travis-ci.org/jabl/ansible-role-pdsh-genders)
+[![Build Status](https://travis-ci.org/fgci-org/ansible-role-pdsh-genders.svg?branch=master)](https://travis-ci.org/fgci-org/ansible-role-pdsh-genders)
 
 Installs pdsh and sets up a /etc/genders based on ansible groups.
 
